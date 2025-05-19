@@ -9,6 +9,9 @@ import {
   SiJavascript,
   SiHtml5,
   SiCss3,
+  SiPython,
+  SiPhp,
+  SiSocketdotio,
 } from "react-icons/si";
 import { BsFiletypeScss } from "react-icons/bs";
 import { FaNodeJs } from "react-icons/fa";
@@ -17,6 +20,9 @@ type TechStack = {
   nextjs?: boolean;
   react?: boolean;
   typescript?: boolean;
+  python?: boolean;
+  php?: boolean;
+  socketio?: boolean;
   javascript?: boolean;
   nodejs?: boolean;
   html?: boolean;
@@ -38,6 +44,13 @@ const techStackIcons: Record<keyof TechStack, IconObject> = {
     name: "TypeScript",
     icon: SiTypescript,
     href: "https://www.typescriptlang.org",
+  },
+  python: { name: "Python", icon: SiPython, href: "https://www.python.org" },
+  php: { name: "PHP", icon: SiPhp, href: "https://www.php.net" },
+  socketio: {
+    name: "Socket.IO",
+    icon: SiSocketdotio,
+    href: "https://socket.io",
   },
   javascript: {
     name: "JavaScript",
@@ -90,20 +103,39 @@ export const ProjectCard = ({
 }: {
   title: string;
   description: string;
-  link: string;
+  link?: string;
   stack?: TechStack;
 }) => {
+  const Content = () => {
+    return (
+      <>
+        <div className="flex flex-col gap-4">
+          <h3 className="text-2xl font-bold">
+            {title}
+            {link ? " →" : null}
+          </h3>
+          <div className="text-lg">{description}</div>
+        </div>
+        {stack ? <Stack {...stack} /> : null}
+      </>
+    );
+  };
+
+  if (link) {
+    return (
+      <Link
+        className="flex h-full w-full flex-col justify-between gap-4 rounded-xl bg-white/10 p-4 text-white transition-transform hover:scale-105 hover:bg-white/20"
+        href={link}
+        target="_blank"
+      >
+        <Content />
+      </Link>
+    );
+  }
+
   return (
-    <Link
-      className="flex h-full w-full flex-col justify-between gap-4 rounded-xl bg-white/10 p-4 text-white transition-transform hover:scale-105 hover:bg-white/20"
-      href={link}
-      target="_blank"
-    >
-      <div className="flex flex-col gap-4">
-        <h3 className="text-2xl font-bold">{title} →</h3>
-        <div className="text-lg">{description}</div>
-      </div>
-      {stack ? <Stack {...stack} /> : null}
-    </Link>
+    <div className="flex h-full w-full flex-col justify-between gap-4 rounded-xl bg-white/10 p-4 text-white">
+      <Content />
+    </div>
   );
 };

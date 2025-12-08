@@ -95,6 +95,31 @@ const Stack = (props: TechStack) => {
   );
 };
 
+const ProjectCardContent = ({
+  title,
+  description,
+  link,
+  stack,
+}: {
+  title: string;
+  description: string;
+  link?: string;
+  stack?: TechStack;
+}) => {
+  return (
+    <>
+      <div className="flex flex-col gap-4">
+        <h3 className="text-2xl font-bold">
+          {title}
+          {link ? " →" : null}
+        </h3>
+        <div className="text-lg">{description}</div>
+      </div>
+      {stack ? <Stack {...stack} /> : null}
+    </>
+  );
+};
+
 export const ProjectCard = ({
   title,
   description,
@@ -106,21 +131,6 @@ export const ProjectCard = ({
   link?: string;
   stack?: TechStack;
 }) => {
-  const Content = () => {
-    return (
-      <>
-        <div className="flex flex-col gap-4">
-          <h3 className="text-2xl font-bold">
-            {title}
-            {link ? " →" : null}
-          </h3>
-          <div className="text-lg">{description}</div>
-        </div>
-        {stack ? <Stack {...stack} /> : null}
-      </>
-    );
-  };
-
   if (link) {
     return (
       <Link
@@ -128,14 +138,24 @@ export const ProjectCard = ({
         href={link}
         target="_blank"
       >
-        <Content />
+        <ProjectCardContent
+          title={title}
+          description={description}
+          link={link}
+          stack={stack}
+        />
       </Link>
     );
   }
 
   return (
     <div className="flex h-full w-full flex-col justify-between gap-4 rounded-xl bg-white/10 p-4 text-white">
-      <Content />
+      <ProjectCardContent
+        title={title}
+        description={description}
+        link={link}
+        stack={stack}
+      />
     </div>
   );
 };

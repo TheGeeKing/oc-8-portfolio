@@ -7,6 +7,7 @@ import "./src/env.js";
 /** @type {import("next").NextConfig} */
 const config = {
   output: process.env.DOCKER_BUILD === "true" ? "standalone" : undefined,
+  cacheComponents: true,
 };
 
 export default config;

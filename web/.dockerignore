@@ -6,3 +6,4 @@ Dockerfile
 README.md
 .next
 .git
+eslint.config.mjs

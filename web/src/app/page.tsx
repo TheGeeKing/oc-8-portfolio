@@ -21,7 +21,7 @@ export default function HomePage() {
                 title="Skills"
                 stack={{
                   python: "maîtrise",
-                  nextjs: "application",
+                  nextjs: "maîtrise",
                   // javascript: "application",
                   react: "application",
                   typescript: "application",
@@ -35,12 +35,13 @@ export default function HomePage() {
               <Card>
                 <p className="text-xl">
                   Je suis actuellement étudiant en alternance Développeur Web
-                  chez Morfo 🌱. J'ai fait 2 années de Licence CMI Informatique
-                  à l'Université de Montpellier et je suis désormais un cursus
-                  en alternance au sein d'OpenClassrooms. J'ai pour objectif de
-                  continuer sur un Bachelor développeur Web puis ensuite sur un
-                  Master FullStack. J'aime réaliser des projets qui répondent à
-                  des besoins personnels, ou contribuer à l'open source.
+                  chez Design Therapy 🖌️. J'ai fait 2 années de Licence CMI
+                  Informatique à l'Université de Montpellier et je suis
+                  désormais en 3ème année de Bachelor Développeur Web en
+                  alternance au sein de MyDigitalSchool. J'ai pour objectif
+                  d'ensuite continuer sur un Master FullStack/DevOps. J'aime
+                  réaliser des projets qui répondent à des besoins personnels,
+                  ou contribuer à l'open source.
                 </p>
               </Card>
             </div>

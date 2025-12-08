@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 import { type IconType } from "react-icons";
 import {
   SiTailwindcss,
@@ -16,7 +15,7 @@ import { BsFiletypeScss } from "react-icons/bs";
 import { FaNodeJs } from "react-icons/fa";
 import { Card } from "./Card";
 
-type Mastering = "notions" | "application" | "maîtrise";
+type Mastering = "notions" | "application" | "maîtrise" | "expertise";
 
 type TechStack = {
   nextjs?: Mastering;
@@ -85,6 +84,7 @@ const sortTechStack = (stack: TechStack): string[] => {
     notions: 1,
     application: 2,
     maîtrise: 3,
+    expertise: 4,
   };
 
   return Object.keys(stack).sort((a, b) => {
@@ -107,7 +107,7 @@ const Stack = (props: TechStack) => {
   const sortedKeys = sortTechStack(props);
 
   return (
-    <div className="grid grid-cols-2 gap-4 min-[450px]:grid-cols-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    <div className="grid grid-cols-2 gap-4 min-[450px]:grid-cols-3 min-[550px]:grid-cols-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {sortedKeys.map((key) => {
         const {
           icon: Icon,

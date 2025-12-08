@@ -27,7 +27,8 @@ export default function HomePage() {
                   typescript: "application",
                   // nodejs: "application",
                   tailwindcss: "application",
-                  php: "application",
+                  // php: "application",
+                  docker: "maîtrise",
                 }}
               />
             </div>

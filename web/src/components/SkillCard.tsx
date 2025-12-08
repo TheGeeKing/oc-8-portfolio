@@ -10,9 +10,10 @@ import {
   SiCss3,
   SiPython,
   SiPhp,
+  SiNodedotjs,
+  SiDocker,
 } from "react-icons/si";
 import { BsFiletypeScss } from "react-icons/bs";
-import { FaNodeJs } from "react-icons/fa";
 import { Card } from "./Card";
 
 type Mastering = "notions" | "application" | "maîtrise" | "expertise";
@@ -29,6 +30,7 @@ type TechStack = {
   css?: Mastering;
   python?: Mastering;
   php?: Mastering;
+  docker?: Mastering;
 };
 
 type IconObject = {
@@ -50,7 +52,7 @@ const techStackIcons: Record<keyof TechStack, IconObject> = {
     icon: SiJavascript,
     href: "https://developer.mozilla.org/docs/Web/JavaScript",
   },
-  nodejs: { name: "Node.js", icon: FaNodeJs, href: "https://nodejs.org" },
+  nodejs: { name: "Node.js", icon: SiNodedotjs, href: "https://nodejs.org" },
   html: {
     name: "HTML",
     icon: SiHtml5,
@@ -76,6 +78,11 @@ const techStackIcons: Record<keyof TechStack, IconObject> = {
     name: "PHP",
     icon: SiPhp,
     href: "https://www.php.net",
+  },
+  docker: {
+    name: "Docker",
+    icon: SiDocker,
+    href: "https://www.docker.com",
   },
 } as const;
 

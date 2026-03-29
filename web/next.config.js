@@ -4,10 +4,11 @@
  */
 import "./src/env.js";
 
+const isDockerBuild = process.env.DOCKER_BUILD === "true";
+
 /** @type {import("next").NextConfig} */
 const config = {
-  output: process.env.DOCKER_BUILD === "true" ? "standalone" : undefined,
-  cacheComponents: true,
+  output: isDockerBuild ? "export" : undefined,
 };
 
 export default config;

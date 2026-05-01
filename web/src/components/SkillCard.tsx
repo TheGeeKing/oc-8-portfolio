@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { type IconType } from "react-icons";
+import { FaRegHandPointer } from "react-icons/fa6";
 import {
   SiTailwindcss,
   SiReact,
@@ -15,6 +16,7 @@ import {
 } from "react-icons/si";
 import { BsFiletypeScss } from "react-icons/bs";
 import { Card } from "./Card";
+import { cn } from "@/lib/utils";
 
 type Mastering = "notions" | "application" | "maîtrise" | "expertise";
 
@@ -160,7 +162,21 @@ export const SkillCard = ({
   transitionTypes?: string[];
 }) => {
   const card = (
-    <Card className={href ? "transition-colors hover:bg-white/20" : ""}>
+    <Card
+      className={cn(
+        href &&
+          "relative overflow-hidden pr-14 transition-colors hover:bg-white/20",
+      )}
+    >
+      {href && (
+        <span
+          aria-hidden="true"
+          className="skill-tap-hint pointer-events-none absolute right-3 top-3 flex h-10 w-10 items-center justify-center rounded-full border border-[hsl(280,100%,70%)]/40 bg-black/25 text-[hsl(280,100%,70%)] shadow-lg shadow-black/20"
+        >
+          <span className="skill-tap-ring absolute inset-0 rounded-full border border-[hsl(280,100%,70%)]/45" />
+          <FaRegHandPointer className="skill-tap-icon relative h-5 w-5" />
+        </span>
+      )}
       <h3 className="text-2xl font-bold">{title}</h3>
       {stack ? <Stack {...stack} interactive={!href} /> : null}
     </Card>

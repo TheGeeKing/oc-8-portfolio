@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ViewTransition } from "react";
+import { SkillCardHintStorage } from "@/components/SkillCardHintStorage";
 import { FaArrowLeft } from "react-icons/fa6";
 import { SidebarCard } from "./components/SidebarCard";
 import { SkillInventory } from "./components/SkillInventory";
@@ -20,8 +21,9 @@ export default function SkillsPage() {
       exit={{ "nav-back": "overlay-out", default: "none" }}
     >
       <main className="min-h-dvh bg-black/20 px-3 py-4 text-white sm:px-6 lg:px-8">
+        <SkillCardHintStorage markSeen />
         <section className="mx-auto grid h-[calc(100dvh-2rem)] w-full max-w-7xl grid-rows-[auto_1fr] overflow-hidden rounded-xl border border-white/10 bg-[#16172c] shadow-2xl shadow-black/40">
-          <header className="flex gap-4 border-b border-white/10 bg-white/[0.04] p-4 flex-row items-center justify-between sm:p-5">
+          <header className="flex flex-row items-center justify-between gap-4 border-b border-white/10 bg-white/[0.04] p-4 sm:p-5">
             <div>
               {/* <p className="text-xs font-semibold uppercase tracking-wide text-white/45">
                 Notes techniques

@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 
+import { SkillCardHintStorage } from "@/components/SkillCardHintStorage";
 import { GeistSans } from "geist/font/sans";
 import { type Viewport, type Metadata } from "next";
 
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${GeistSans.variable}`}>
       <body className="flex min-h-screen flex-col bg-gradient-to-b from-[#1f153d] to-[#15162c] text-white">
+        <SkillCardHintStorage />
         {children}
       </body>
     </html>

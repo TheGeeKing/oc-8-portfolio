@@ -56,13 +56,13 @@ export default function HomePage() {
               stack={{ react: true, javascript: true, socketio: true }}
             />
             <ProjectCard
-              title="tam-mais-en-mieux"
+              title="Tam mais en mieux"
               description="Une application mobile pour voir les horaires des transports en commun de Montpellier"
               stack={{ react: true, typescript: true }}
             />
             <ProjectCard
-              title="control-my-spotify"
-              description="Un site pour contrôler ma musique Spotify."
+              title="Control My Spotify"
+              description="Un site pour que n'importe qui puisse ajouter des morceaux à ma queue Spotify."
               stack={{ react: true, typescript: true, nextjs: true }}
             />
             <ProjectCard
@@ -91,19 +91,19 @@ export default function HomePage() {
             />
             <ProjectCard
               title="Global-Goals-Grinder"
-              description="Grind some money on Samsung Global Goals app to donate to good causes :)"
+              description="Permet d'automatiser le visionnage de pubs pour ensuite faire des donations aux Global Goals."
               link="https://github.com/TheGeeKing/Global-Goals-Grinder"
               stack={{ python: true }}
             />
             <ProjectCard
               title="Discord-RPC-Maker"
-              description="Broadcast a custom RPC to your Discord status"
+              description="Une interface simple pour personnaliser son activité sur Discord."
               link="https://github.com/TheGeeKing/Discord-RPC-Maker"
               stack={{ python: true }}
             />
             <ProjectCard
               title="Minecraft-Server-Maker"
-              description="Make your own Minecraft server easily!"
+              description="Un petit GUI pour créer un serveur Minecraft."
               link="https://github.com/TheGeeKing/Minecraft-Server-Maker"
               stack={{ python: true }}
             />

@@ -121,11 +121,13 @@ const ProjectCardContent = ({
 };
 
 export const ProjectCard = ({
+  id,
   title,
   description,
   link,
   stack,
 }: {
+  id?: string;
   title: string;
   description: string;
   link?: string;
@@ -134,8 +136,9 @@ export const ProjectCard = ({
   if (link) {
     return (
       <Link
-        className="flex h-full w-full flex-col justify-between gap-4 rounded-xl bg-white/10 p-4 text-white transition-transform hover:scale-105 hover:bg-white/20"
+        className="flex h-full w-full scroll-mt-8 flex-col justify-between gap-4 rounded-xl bg-white/10 p-4 text-white transition-transform hover:scale-105 hover:bg-white/20"
         href={link}
+        id={id}
         target="_blank"
       >
         <ProjectCardContent
@@ -149,7 +152,10 @@ export const ProjectCard = ({
   }
 
   return (
-    <div className="flex h-full w-full flex-col justify-between gap-4 rounded-xl bg-white/10 p-4 text-white">
+    <div
+      className="flex h-full w-full scroll-mt-8 flex-col justify-between gap-4 rounded-xl bg-white/10 p-4 text-white"
+      id={id}
+    >
       <ProjectCardContent
         title={title}
         description={description}

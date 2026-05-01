@@ -41,6 +41,7 @@ RUN \
 # Production image, copy the static export into nginx.
 FROM nginx:alpine AS runner
 
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /app/out /usr/share/nginx/html
 
 EXPOSE 80

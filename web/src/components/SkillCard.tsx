@@ -110,7 +110,10 @@ const sortTechStack = (stack: TechStack): string[] => {
   });
 };
 
-const Stack = (props: TechStack) => {
+const Stack = ({
+  interactive = true,
+  ...props
+}: TechStack & { interactive?: boolean }) => {
   const sortedKeys = sortTechStack(props);
 
   return (
@@ -126,9 +129,13 @@ const Stack = (props: TechStack) => {
             key={name}
             className="flex flex-col items-center justify-center gap-2"
           >
-            <Link href={href} target="_blank">
+            {interactive ? (
+              <Link href={href} target="_blank">
+                <Icon className="h-6 w-6" title={name} />
+              </Link>
+            ) : (
               <Icon className="h-6 w-6" title={name} />
-            </Link>
+            )}
             {props[key as keyof TechStack] && (
               <span>{props[key as keyof TechStack]}</span>
             )}
@@ -142,14 +149,35 @@ const Stack = (props: TechStack) => {
 export const SkillCard = ({
   title,
   stack,
+  href,
+  ariaLabel,
+  transitionTypes,
 }: {
   title: string;
   stack: TechStack;
+  href?: string;
+  ariaLabel?: string;
+  transitionTypes?: string[];
 }) => {
-  return (
-    <Card>
+  const card = (
+    <Card className={href ? "transition-colors hover:bg-white/20" : ""}>
       <h3 className="text-2xl font-bold">{title}</h3>
-      {stack ? <Stack {...stack} /> : null}
+      {stack ? <Stack {...stack} interactive={!href} /> : null}
     </Card>
   );
+
+  if (href) {
+    return (
+      <Link
+        aria-label={ariaLabel ?? title}
+        className="block h-full rounded-xl outline-offset-4 transition-transform hover:scale-[1.02] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[hsl(280,100%,70%)]"
+        href={href}
+        transitionTypes={transitionTypes}
+      >
+        {card}
+      </Link>
+    );
+  }
+
+  return card;
 };

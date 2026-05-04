@@ -4,6 +4,7 @@ import { useEffect } from "react";
 
 const storageKey = "skill-card-hint-seen";
 const documentAttribute = "data-skill-card-hint-seen";
+const checkedDocumentAttribute = "data-skill-card-hint-checked";
 const hintCooldown = 7 * 24 * 60 * 60 * 1000;
 
 export const SkillCardHintStorage = ({
@@ -31,6 +32,7 @@ export const SkillCardHintStorage = ({
     } catch {
       document.documentElement.removeAttribute(documentAttribute);
     }
+    document.documentElement.setAttribute(checkedDocumentAttribute, "true");
   }, [markSeen]);
 
   return null;

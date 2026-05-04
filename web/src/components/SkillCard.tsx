@@ -164,20 +164,21 @@ export const SkillCard = ({
   const card = (
     <Card
       className={cn(
-        href &&
-          "relative overflow-hidden pr-14 transition-colors hover:bg-white/20",
+        href && "relative overflow-hidden transition-colors hover:bg-white/20",
       )}
     >
-      {href && (
-        <span
-          aria-hidden="true"
-          className="skill-tap-hint pointer-events-none absolute right-3 top-3 flex h-10 w-10 items-center justify-center rounded-full border border-[hsl(280,100%,70%)]/40 bg-black/25 text-[hsl(280,100%,70%)] shadow-lg shadow-black/20"
-        >
-          <span className="skill-tap-ring absolute inset-0 rounded-full border border-[hsl(280,100%,70%)]/45" />
-          <FaRegHandPointer className="skill-tap-icon relative h-5 w-5" />
-        </span>
-      )}
-      <h3 className="text-2xl font-bold">{title}</h3>
+      <div className="flex items-center justify-between gap-3">
+        <h3 className="text-2xl font-bold">{title}</h3>
+        {href && (
+          <span
+            aria-hidden="true"
+            className="skill-tap-hint pointer-events-none relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[hsl(280,100%,70%)]/40 bg-black/25 text-[hsl(280,100%,70%)] shadow-lg shadow-black/20"
+          >
+            <span className="skill-tap-ring absolute inset-0 rounded-full border border-[hsl(280,100%,70%)]/45" />
+            <FaRegHandPointer className="skill-tap-icon relative h-5 w-5" />
+          </span>
+        )}
+      </div>
       {stack ? <Stack {...stack} interactive={!href} /> : null}
     </Card>
   );

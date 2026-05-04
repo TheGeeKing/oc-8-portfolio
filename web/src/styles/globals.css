@@ -67,6 +67,15 @@
   animation: skill-tap-ring 2.6s ease-out infinite;
 }
 
+.skill-tap-hint {
+  opacity: 0;
+  transition: opacity 220ms ease-out;
+}
+
+[data-skill-card-hint-checked="true"] .skill-tap-hint {
+  opacity: 1;
+}
+
 [data-skill-card-hint-seen="true"] .skill-tap-hint {
   display: none;
 }
@@ -90,5 +99,9 @@
   .skill-tap-icon,
   .skill-tap-ring {
     animation: none !important;
+  }
+
+  .skill-tap-hint {
+    transition: none !important;
   }
 }

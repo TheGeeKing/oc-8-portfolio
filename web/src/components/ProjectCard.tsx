@@ -76,17 +76,21 @@ const techStackIcons: Record<keyof TechStack, IconObject> = {
   },
 } as const;
 
-const Stack = (props: TechStack) => {
+const Stack = ({
+  canBeLink = true,
+  ...props
+}: TechStack & { canBeLink?: boolean }) => {
   return (
     <div className="flex gap-2">
       {Object.entries(techStackIcons).map(
         ([key, { icon: Icon, name, href }]) => {
           if (props[key as keyof TechStack]) {
-            return (
+            if (canBeLink) {
               <Link href={href} key={name} target="_blank">
                 <Icon key={key} className="h-6 w-6" title={name} />
-              </Link>
-            );
+              </Link>;
+            }
+            return <Icon key={key} className="h-6 w-6" title={name} />;
           }
           return null;
         },
@@ -115,7 +119,7 @@ const ProjectCardContent = ({
         </h3>
         <div className="text-lg">{description}</div>
       </div>
-      {stack ? <Stack {...stack} /> : null}
+      {stack ? <Stack {...stack} canBeLink={false} /> : null}
     </>
   );
 };

@@ -65,8 +65,20 @@ export default function HomePage() {
             <ProjectCard
               id="tam-mais-en-mieux"
               title="Tam mais en mieux"
-              description="Une application mobile pour voir les horaires des transports en commun de Montpellier"
+              description="Une application mobile pour voir les horaires des transports en commun de Montpellier."
               stack={{ react: true, typescript: true }}
+            />
+            <ProjectCard
+              id="new-york-city-bikes"
+              title="New York City Bikes"
+              description="Un projet ayant pour but de me challenger sur l'optimisation de performance avec une base de données ayant +25M de lignes."
+              link="https://nyc-bike-stats.mma.dev"
+              stack={{
+                react: true,
+                typescript: true,
+                nextjs: true,
+                tailwindcss: true,
+              }}
             />
             <ProjectCard
               id="control-my-spotify"
@@ -77,9 +89,36 @@ export default function HomePage() {
             <ProjectCard
               id="umontpellier-ical-api"
               title="umontpellier-ical-api"
-              description="Une API pour récupérer l'emploi du temps de l'Université de Montpellier"
+              description="Une API indexant l'emploi du temps de l'Université de Montpellier."
               link="https://github.com/TheGeeKing/umontpellier-ical-api"
               stack={{ nodejs: true, javascript: true }}
+            />
+            <ProjectCard
+              id="no-thank-you"
+              title="No Thank You"
+              description="Rétro-ingénierie sur une application mobile trop lente au démarrage afin de développer mon propre frontend."
+              stack={{ react: true, typescript: true }}
+            />
+            <ProjectCard
+              id="manhunt-plus"
+              title="Manhunt Plus"
+              link="https://github.com/TheGeeKing/manhunt-plus"
+              description="Fork d'un plugin minecraft afin de l'améliorer."
+              stack={{ java: true }}
+            />
+            <ProjectCard
+              id="bun-chat"
+              title="Bun Chat"
+              description="Un chat en temps réel avec Bun et Socket.IO."
+              link="https://chat.mma.dev"
+              stack={{ typescript: true, socketio: true }}
+            />
+            <ProjectCard
+              id="shell"
+              title="Shell"
+              description="Un environnement containerisé pour exécuter des commandes shell en ligne."
+              link="https://shell.mma.dev"
+              stack={{ typescript: true, socketio: true, react: true }}
             />
             <ProjectCard
               id="tautulli-python-2-trakt"
@@ -91,7 +130,7 @@ export default function HomePage() {
             <ProjectCard
               id="help-meeee"
               title="Help meeee"
-              description="Améliorer la qualité d'enseignement des élèves"
+              description="Améliorer la qualité d'enseignement des élèves."
               link="https://mma.dev/help_me/"
               stack={{ css: true, html: true, javascript: true, php: true }}
             />

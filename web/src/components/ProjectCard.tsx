@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 import { type IconType } from "react-icons";
 import {
   SiTailwindcss,
@@ -15,6 +14,7 @@ import {
 } from "react-icons/si";
 import { BsFiletypeScss } from "react-icons/bs";
 import { FaNodeJs } from "react-icons/fa";
+import { FaJava } from "react-icons/fa6";
 
 type TechStack = {
   nextjs?: boolean;
@@ -22,6 +22,7 @@ type TechStack = {
   typescript?: boolean;
   python?: boolean;
   php?: boolean;
+  java?: boolean;
   socketio?: boolean;
   javascript?: boolean;
   nodejs?: boolean;
@@ -47,6 +48,7 @@ const techStackIcons: Record<keyof TechStack, IconObject> = {
   },
   python: { name: "Python", icon: SiPython, href: "https://www.python.org" },
   php: { name: "PHP", icon: SiPhp, href: "https://www.php.net" },
+  java: { name: "Java", icon: FaJava, href: "https://www.java.com" },
   socketio: {
     name: "Socket.IO",
     icon: SiSocketdotio,

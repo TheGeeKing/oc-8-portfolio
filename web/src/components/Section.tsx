@@ -1,4 +1,3 @@
-import React from "react";
 import { Separator } from "./Separator";
 
 export const Section = ({ title }: { title: string }) => {

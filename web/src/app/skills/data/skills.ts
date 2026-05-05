@@ -22,27 +22,6 @@ export const skillCategories: SkillCategory[] = [
     title: "Frontend",
     skills: [
       {
-        name: "TypeScript",
-        level: "application",
-        details: [
-          "component props",
-          "typed data models",
-          "utility types",
-          "API response shapes",
-          "safer refactors",
-        ],
-        usages: [
-          { type: "company", label: "Morfo" },
-          { type: "company", label: "Design Therapy" },
-          { type: "project", label: "Kasa", projectSlug: "kasa" },
-          {
-            type: "project",
-            label: "Control My Spotify",
-            projectSlug: "control-my-spotify",
-          },
-        ],
-      },
-      {
         name: "Next.js",
         level: "maîtrise",
         details: [
@@ -83,11 +62,6 @@ export const skillCategories: SkillCategory[] = [
           { type: "company", label: "Design Therapy" },
           { type: "project", label: "Projet L2", projectSlug: "project-l2" },
           { type: "project", label: "Kasa", projectSlug: "kasa" },
-          {
-            type: "project",
-            label: "Tam mais en mieux",
-            projectSlug: "tam-mais-en-mieux",
-          },
         ],
       },
       {
@@ -118,18 +92,33 @@ export const skillCategories: SkillCategory[] = [
     title: "Backend",
     skills: [
       {
-        name: "Node.js",
+        name: "TypeScript",
         level: "application",
         details: [
-          // "REST endpoints",
-          // "JSON responses",²
-          // "external data fetching",
-          // "server-side logic",
-          "API REST",
-          "Express",
-          "Fastify",
-          "Middleware",
+          "Types",
+          "Interfaces",
+          "Omit",
+          "Pick",
+          "Fonctions génériques",
+          "Type conditionnel",
+          "Type assertion",
+          "Doom en types TypeScript",
         ],
+        usages: [
+          { type: "company", label: "Morfo" },
+          { type: "company", label: "Design Therapy" },
+          { type: "project", label: "Kasa", projectSlug: "kasa" },
+          {
+            type: "project",
+            label: "Control My Spotify",
+            projectSlug: "control-my-spotify",
+          },
+        ],
+      },
+      {
+        name: "Node.js",
+        level: "application",
+        details: ["API REST", "Express", "Fastify", "SSE", "Middleware"],
         usages: [
           {
             type: "project",
@@ -158,6 +147,11 @@ export const skillCategories: SkillCategory[] = [
             label: "EDF Tempo Bot",
             projectSlug: "edf-tempo-bot",
           },
+          {
+            type: "project",
+            label: "Bun Chat",
+            projectSlug: "bun-chat",
+          },
         ],
       },
       {
@@ -177,6 +171,7 @@ export const skillCategories: SkillCategory[] = [
           "DTOs",
         ],
         usages: [
+          { type: "formation", label: "My Digital School" },
           {
             type: "project",
             label: "Chrysalis",
@@ -192,11 +187,14 @@ export const skillCategories: SkillCategory[] = [
         name: "Python",
         level: "maîtrise",
         details: [
+          "POO",
+          "Selenium",
           "Gestion de fichiers",
           "Appels API",
           "Scripts d'automation",
           "Petits outils",
           "Prototypes IA/RAG",
+          "Walrus opérateur",
         ],
         usages: [
           { type: "company", label: "Design Therapy" },
@@ -226,15 +224,31 @@ export const skillCategories: SkillCategory[] = [
       {
         name: "PHP",
         level: "application",
-        details: [
-          "server-side scripting",
-          "database integration",
-          "form handling",
-          "session management",
-        ],
+        details: ["Gestion de session", "PDO", "Symfony"],
         usages: [
+          { type: "company", label: "S.A.R.L Les Cagots" },
+          { type: "formation", label: "My Digital School" },
           { type: "project", label: "Help meeee", projectSlug: "help-meeee" },
         ],
+      },
+      {
+        name: "Java",
+        level: "notions",
+        details: ["POO", "public/private/protected/final", "exceptions"],
+        usages: [
+          { type: "formation", label: "Faculté des Sciences" },
+          {
+            type: "project",
+            label: "Manhunt Plus",
+            projectSlug: "manhunt-plus",
+          },
+        ],
+      },
+      {
+        name: "C",
+        level: "notions",
+        details: ["Pointeurs", "Structures de données", "Malloc", "websockets"],
+        usages: [{ type: "formation", label: "Faculté des Sciences" }],
       },
     ],
   },
@@ -276,6 +290,7 @@ export const skillCategories: SkillCategory[] = [
           "Fonctions",
         ],
         usages: [
+          { type: "company", label: "S.A.R.L Les Cagots" },
           {
             type: "project",
             label: "Help meeee",
@@ -292,6 +307,7 @@ export const skillCategories: SkillCategory[] = [
           "embedded data models",
         ],
         usages: [
+          { type: "project", label: "Mon premier bot discord" },
           {
             type: "project",
             label: "Mon Vieux Grimoire",
@@ -306,9 +322,9 @@ export const skillCategories: SkillCategory[] = [
         usages: [{ type: "project", label: "Différents petits projets" }],
       },
       {
-        name: "Bucket Storage",
+        name: "Object Storage",
         level: "application",
-        details: ["S3", "RustFS"],
+        details: ["Bucket", "S3", "RustFS", "Minio"],
         usages: [
           { type: "company", label: "Design Therapy" },
           { type: "company", label: "Morfo" },
@@ -322,19 +338,33 @@ export const skillCategories: SkillCategory[] = [
       {
         name: "React Native",
         level: "application",
-        details: ["bundle APK ou AAB", "utilisation appareil photo"],
+        details: [
+          "bundle APK / AAB",
+          "Splash screen",
+          "utilisation appareil photo",
+        ],
         usages: [
           {
             type: "project",
             label: "Tam mais en mieux",
             projectSlug: "tam-mais-en-mieux",
           },
+          {
+            type: "project",
+            label: "No Thank You",
+            projectSlug: "no-thank-you",
+          },
         ],
       },
       {
         name: "Flutter",
         level: "notions",
-        details: ["Stateless/Stateful Widgets", "Provider/Consumer"],
+        details: [
+          "Stateless/Stateful Widgets",
+          "Provider/Consumer",
+          "FutureBuilder",
+          "Splash screen",
+        ],
         usages: [{ type: "project", label: "Todo List" }],
       },
     ],
@@ -345,7 +375,13 @@ export const skillCategories: SkillCategory[] = [
       {
         name: "Jest / Vitest / Bun:test",
         level: "application",
-        details: ["unit tests", "mocking", "coverage", "CI/CD"],
+        details: [
+          "tests unitaires",
+          "tests d'intégration",
+          "mocking",
+          "coverage",
+          "CI/CD",
+        ],
         usages: [
           { type: "company", label: "Design Therapy" },
           { type: "company", label: "Morfo" },
@@ -355,7 +391,7 @@ export const skillCategories: SkillCategory[] = [
       {
         name: "Playwright",
         level: "application",
-        details: ["browser tests", "e2e tests", "CI/CD"],
+        details: ["tests end-to-end", "CI/CD"],
         usages: [{ type: "company", label: "Design Therapy" }],
       },
     ],
@@ -372,15 +408,24 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    title: "Tooling / DevOps",
+    title: "DevOps",
     skills: [
       {
         name: "Docker",
         level: "maîtrise",
-        details: ["Dockerfiles", "Multi-stage builds", "Volumes"],
+        details: [
+          "Dockerfiles",
+          "Multi-stage builds",
+          "Volumes",
+          "Docker Compose",
+          "Healthchecks",
+          "Scaling",
+        ],
         usages: [
           { type: "company", label: "Morfo" },
+          { type: "project", label: "Shell", projectSlug: "shell" },
           { type: "project", label: "Portfolio", projectSlug: "top" },
+          { type: "project", label: "Tous mes projets self-hostés" },
         ],
       },
       {
@@ -396,29 +441,6 @@ export const skillCategories: SkillCategory[] = [
         usages: [
           { type: "company", label: "Design Therapy" },
           { type: "project", label: "Bibi & Co" },
-        ],
-      },
-      {
-        name: "Git",
-        level: "application",
-        details: [
-          "Branches",
-          "Pull Requests",
-          "Forks",
-          "Conventional Commits",
-          "Tag/Release",
-          "PR Reviews",
-          "PR/Issue Templates",
-        ],
-        usages: [
-          { type: "company", label: "Design Therapy" },
-          { type: "company", label: "Morfo" },
-          { type: "formation", label: "OpenClassrooms" },
-          {
-            type: "project",
-            label: "Projets personnels",
-            projectSlug: "projets",
-          },
         ],
       },
       {
@@ -443,6 +465,86 @@ export const skillCategories: SkillCategory[] = [
             projectSlug: "projets",
           },
         ],
+      },
+      {
+        name: "Reverse Proxy",
+        level: "application",
+        details: [
+          "Nginx",
+          "Caddy",
+          "Traefik",
+          "TLS",
+          "HAProxy",
+          "Load Balancer (Round Robin)",
+        ],
+        usages: [
+          { type: "company", label: "Design Therapy" },
+          { type: "project", label: "Tous mes projets self-hostés" },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Outils",
+    skills: [
+      {
+        name: "Notion",
+        level: "maîtrise",
+        details: [
+          "Pages",
+          "Databases",
+          "Sprint Planning",
+          "Kanban",
+          "Gantt",
+          "Documentation",
+        ],
+        usages: [
+          { type: "company", label: "Design Therapy" },
+          { type: "company", label: "Morfo" },
+          { type: "formation", label: "OpenClassrooms" },
+          {
+            type: "project",
+            label: "Projets personnels",
+            projectSlug: "projets",
+          },
+        ],
+      },
+      {
+        name: "Git",
+        level: "application",
+        details: [
+          "Branches",
+          "Pull Requests",
+          "Conventional Commits",
+          "Rebase",
+          "Forks",
+          "Tag/Release",
+          "Code Reviews",
+          "PR/Issue Templates",
+        ],
+        usages: [
+          { type: "company", label: "Design Therapy" },
+          { type: "company", label: "Morfo" },
+          { type: "formation", label: "OpenClassrooms" },
+          {
+            type: "project",
+            label: "Projets personnels",
+            projectSlug: "projets",
+          },
+        ],
+      },
+      {
+        name: "Figma",
+        level: "application",
+        details: [
+          "Design",
+          "Prototyping",
+          "Collaboration",
+          "Plugins",
+          "Design Tokens",
+          "Design Systems",
+        ],
+        usages: [{ type: "company", label: "Design Therapy" }],
       },
     ],
   },

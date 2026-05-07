@@ -11,6 +11,7 @@ import {
   SiPython,
   SiPhp,
   SiSocketdotio,
+  SiBun,
 } from "react-icons/si";
 import { BsFiletypeScss } from "react-icons/bs";
 import { FaNodeJs } from "react-icons/fa";
@@ -25,6 +26,7 @@ type TechStack = {
   java?: boolean;
   socketio?: boolean;
   javascript?: boolean;
+  bun?: boolean;
   nodejs?: boolean;
   html?: boolean;
   tailwindcss?: boolean;
@@ -59,6 +61,7 @@ const techStackIcons: Record<keyof TechStack, IconObject> = {
     icon: SiJavascript,
     href: "https://developer.mozilla.org/docs/Web/JavaScript",
   },
+  bun: { name: "Bun", icon: SiBun, href: "https://bun.sh" },
   nodejs: { name: "Node.js", icon: FaNodeJs, href: "https://nodejs.org" },
   html: {
     name: "HTML",

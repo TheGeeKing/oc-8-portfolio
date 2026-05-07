@@ -111,7 +111,7 @@ export default function HomePage() {
               title="Bun Chat"
               description="Un chat en temps réel avec Bun et Socket.IO."
               link="https://chat.mma.dev"
-              stack={{ typescript: true, socketio: true }}
+              stack={{ typescript: true, socketio: true, bun: true }}
             />
             <ProjectCard
               id="shell"
@@ -119,6 +119,13 @@ export default function HomePage() {
               description="Un environnement containerisé pour exécuter des commandes shell en ligne."
               link="https://shell.mma.dev"
               stack={{ typescript: true, socketio: true, react: true }}
+            />
+            <ProjectCard
+              id="edf-tempo-bot"
+              title="EDF Tempo Bot"
+              description="Un bot qui notifie tous les jours des prévisions des 9 prochains jours EDF Tempo."
+              link="https://t.me/tempo_edf_week"
+              stack={{ typescript: true, bun: true }}
             />
             <ProjectCard
               id="tautulli-python-2-trakt"

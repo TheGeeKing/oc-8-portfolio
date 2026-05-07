@@ -54,6 +54,10 @@ export const selfHostedServices: SelfHostedService[] = [
     name: "ChangeDetection.io",
   },
   {
+    name: "EDF Tempo Bot",
+    url: "https://t.me/tempo_edf_week",
+  },
+  {
     name: "Portfolio",
     url: "https://portfolio.mma.dev",
   },

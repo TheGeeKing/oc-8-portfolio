@@ -223,6 +223,8 @@ export default function HomePage() {
         <Link
           className="text-[hsl(280,100%,70%)]"
           href="https://www.linkedin.com/in/mma--/"
+          data-umami-event="link-click"
+          data-umami-event-link="LinkedIn"
         >
           LinkedIn
         </Link>
@@ -230,6 +232,8 @@ export default function HomePage() {
         <Link
           className="text-[hsl(280,100%,70%)]"
           href="https://github.com/TheGeeKing"
+          data-umami-event="link-click"
+          data-umami-event-link="GitHub"
         >
           GitHub
         </Link>
@@ -238,6 +242,8 @@ export default function HomePage() {
           className="text-[hsl(280,100%,70%)]"
           download
           href="/CV_MOUTTET_Marc-Antoine.pdf"
+          data-umami-event="file-download"
+          data-umami-event-file="CV_MOUTTET_Marc-Antoine.pdf"
         >
           CV
         </Link>

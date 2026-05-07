@@ -30,6 +30,7 @@ COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV SKIP_ENV_VALIDATION=true
 ENV DOCKER_BUILD=true
+ENV NODE_ENV=production
 
 RUN \
   if [ -f yarn.lock ]; then yarn run build; \

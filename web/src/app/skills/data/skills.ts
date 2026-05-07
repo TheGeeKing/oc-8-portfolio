@@ -422,7 +422,7 @@ export const skillCategories: SkillCategory[] = [
           "Scaling",
         ],
         usages: [
-          { type: "company", label: "Morfo" },
+          { type: "company", label: "Design Therapy" },
           { type: "project", label: "Shell", projectSlug: "shell" },
           { type: "project", label: "Portfolio", projectSlug: "top" },
           { type: "project", label: "Tous mes projets self-hostés" },

@@ -23,15 +23,15 @@ export default function HomePage() {
                 title="Compétences"
                 transitionTypes={["nav-forward"]}
                 stack={{
+                  typescript: "maîtrise",
                   python: "maîtrise",
+                  react: "maîtrise",
                   nextjs: "maîtrise",
-                  // javascript: "application",
-                  react: "application",
-                  typescript: "application",
-                  // nodejs: "application",
-                  tailwindcss: "application",
-                  // php: "application",
                   docker: "maîtrise",
+                  tailwindcss: "application",
+                  // javascript: "application",
+                  // nodejs: "application",
+                  // php: "application",
                 }}
               />
             </div>
@@ -225,6 +225,14 @@ export default function HomePage() {
           href="https://github.com/TheGeeKing"
         >
           GitHub
+        </Link>
+        <Dot />
+        <Link
+          className="text-[hsl(280,100%,70%)]"
+          download
+          href="/CV_MOUTTET_Marc-Antoine.pdf"
+        >
+          CV
         </Link>
       </footer>
     </>

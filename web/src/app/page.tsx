@@ -2,6 +2,7 @@
 import { Card } from "@/components/Card";
 import Dot from "@/components/Dot";
 import { ProjectCard } from "@/components/ProjectCard";
+import { ProjectCardTargetSync } from "@/components/ProjectCardTargetSync";
 import { Section } from "@/components/Section";
 import { SkillCard } from "@/components/SkillCard";
 import Link from "next/link";
@@ -9,6 +10,7 @@ import Link from "next/link";
 export default function HomePage() {
   return (
     <>
+      <ProjectCardTargetSync />
       <main id="top">
         <h1 className="mx-auto my-8 flex flex-col items-center justify-center gap-6 text-4xl font-extrabold tracking-wide text-white sm:flex-row sm:text-4xl md:text-5xl lg:m-12 lg:text-6xl">
           Marc-Antoine<span className="text-[hsl(280,100%,70%)]">Mouttet</span>

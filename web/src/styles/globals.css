@@ -80,6 +80,13 @@
   display: none;
 }
 
+.project-card[data-project-card-highlighted="true"] {
+  border-color: hsl(280 100% 70% / 0.65);
+  box-shadow:
+    0 0 0 1px hsl(280 100% 70% / 0.2),
+    0 10px 28px rgb(0 0 0 / 0.24);
+}
+
 ::view-transition-new(.overlay-in) {
   animation: var(--duration-enter) ease-out both overlay-in;
 }

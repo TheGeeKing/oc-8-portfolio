@@ -145,10 +145,12 @@ export const ProjectCard = ({
   if (link) {
     return (
       <Link
-        className="flex h-full w-full scroll-mt-8 flex-col justify-between gap-4 rounded-xl bg-white/10 p-4 text-white transition-transform hover:scale-105 hover:bg-white/20"
+        className="project-card flex h-full w-full scroll-mt-8 flex-col justify-between gap-4 rounded-xl border border-transparent bg-white/10 p-4 text-white transition-transform hover:scale-105 hover:bg-white/20"
         href={link}
         id={id}
         target="_blank"
+        data-umami-event="link-click"
+        data-umami-event-link={title}
       >
         <ProjectCardContent
           title={title}
@@ -162,7 +164,7 @@ export const ProjectCard = ({
 
   return (
     <div
-      className="flex h-full w-full scroll-mt-8 flex-col justify-between gap-4 rounded-xl bg-white/10 p-4 text-white"
+      className="project-card flex h-full w-full scroll-mt-8 flex-col justify-between gap-4 rounded-xl border border-transparent bg-white/10 p-4 text-white"
       id={id}
     >
       <ProjectCardContent

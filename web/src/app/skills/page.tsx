@@ -10,6 +10,7 @@ import { companyStacks } from "./data/companies";
 import { selfHostedServices } from "./data/selfhosted";
 
 const nextSteps = [
+  "Stress testing: k6, stress/load/performance/scalability testing.",
   "DevOps: k8s, k3s, observabilité, grafana, swarm/cluster, environnements reproductibles.",
 ];
 

@@ -61,6 +61,7 @@ export const skillCategories: SkillCategory[] = [
           { type: "company", label: "Morfo" },
           { type: "company", label: "Design Therapy" },
           { type: "project", label: "Projet L2", projectSlug: "project-l2" },
+          { type: "project", label: "TinyCRUD", projectSlug: "tinycrud" },
           { type: "project", label: "Kasa", projectSlug: "kasa" },
         ],
       },
@@ -142,6 +143,11 @@ export const skillCategories: SkillCategory[] = [
           "Tests",
         ],
         usages: [
+          {
+            type: "project",
+            label: "TinyCRUD",
+            projectSlug: "tinycrud",
+          },
           {
             type: "project",
             label: "EDF Tempo Bot",
@@ -385,7 +391,12 @@ export const skillCategories: SkillCategory[] = [
         usages: [
           { type: "company", label: "Design Therapy" },
           { type: "company", label: "Morfo" },
-          { type: "project", label: "EDF Tempo Bot" },
+          {
+            type: "project",
+            label: "EDF Tempo Bot",
+            projectSlug: "edf-tempo-bot",
+          },
+          { type: "project", label: "TinyCRUD", projectSlug: "tinycrud" },
         ],
       },
       {

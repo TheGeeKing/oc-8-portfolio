@@ -89,11 +89,16 @@ export default function HomePage() {
               stack={{ react: true, typescript: true, nextjs: true }}
             />
             <ProjectCard
-              id="umontpellier-ical-api"
-              title="umontpellier-ical-api"
-              description="Une API indexant l'emploi du temps de l'Université de Montpellier."
-              link="https://github.com/TheGeeKing/umontpellier-ical-api"
-              stack={{ nodejs: true, javascript: true }}
+              id="tinycrud"
+              title="TinyCRUD"
+              description="Une alternative avec BEAUCOUP moins de limites que crudcrud.com permettant d'avoir rapidement une API REST pour faire des POCs."
+              link="https://tinycrud.mma.dev"
+              stack={{
+                bun: true,
+                react: true,
+                typescript: true,
+                tailwindcss: true,
+              }}
             />
             <ProjectCard
               id="no-thank-you"
@@ -128,6 +133,13 @@ export default function HomePage() {
               description="Un bot qui notifie tous les jours des prévisions des 9 prochains jours EDF Tempo."
               link="https://t.me/tempo_edf_week"
               stack={{ typescript: true, bun: true }}
+            />
+            <ProjectCard
+              id="umontpellier-ical-api"
+              title="umontpellier-ical-api"
+              description="Une API indexant l'emploi du temps de l'Université de Montpellier."
+              link="https://github.com/TheGeeKing/umontpellier-ical-api"
+              stack={{ nodejs: true, javascript: true }}
             />
             <ProjectCard
               id="tautulli-python-2-trakt"

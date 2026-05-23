@@ -149,14 +149,18 @@ export default function HomePage() {
             <div className="col-span-2">
               <Card>
                 <p className="text-xl">
-                  Je suis actuellement étudiant en alternance Développeur Web
-                  chez Design Therapy 🖌️. J'ai fait 2 années de Licence CMI
-                  Informatique à l'Université de Montpellier et je suis
-                  désormais en 3ème année de Bachelor Développeur Web en
-                  alternance au sein de MyDigitalSchool. J'ai pour objectif
-                  d'ensuite continuer sur un Master FullStack/DevOps. J'aime
-                  réaliser des projets qui répondent à des besoins personnels,
-                  ou contribuer à l'open source.
+                  Développeur full-stack en alternance chez Design Therapy 🖌️,
+                  je conçois et développe des applications web avec une
+                  attention particulière portée à la maintenabilité, à
+                  l'expérience utilisateur et à l'infrastructure. Je travaille
+                  principalement avec React, Next.js, TypeScript et Node.js, du
+                  frontend au backend, en passant par le déploiement et
+                  l'administration de services. En parallèle de mes études, je
+                  développe et héberge mes propres projets autour du
+                  self-hosting, du DevOps et des architectures web modernes.
+                  J'aime construire des solutions concrètes, comprendre le
+                  fonctionnement des outils que j'utilise et expérimenter de
+                  nouvelles technologies.
                 </p>
               </Card>
             </div>

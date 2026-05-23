@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Marc-Antoine Mouttet",
   title: "Marc-Antoine Mouttet | Développeur Full-Stack & DevOps",
   description:
-    "Portfolio de Marc-Antoine Mouttet, développeur web Full-Stack en alternance, spécialisé en React, Next.js, TypeScript, Python, Docker et DevOps.",
+    "Développeur full-stack en alternance, je conçois des applications web et partage mes projets autour de React, Next.js, TypeScript, Python, Docker et DevOps.",
   url: new URL("https://mma.dev"),
   locale: "fr_FR",
   links: {

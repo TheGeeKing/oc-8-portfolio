@@ -4,11 +4,43 @@ import { SkillCardHintStorage } from "@/components/SkillCardHintStorage";
 import { GeistSans } from "geist/font/sans";
 import { type Viewport, type Metadata } from "next";
 import Script from "next/script";
+import { siteConfig } from "./seo";
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "",
-  icons: [{ rel: "icon", url: "/portfolio.256x256.png" }],
+  metadataBase: siteConfig.url,
+  applicationName: siteConfig.name,
+  title: {
+    default: siteConfig.title,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  keywords: [...siteConfig.keywords],
+  authors: [{ name: siteConfig.name, url: siteConfig.url.toString() }],
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: siteConfig.title,
+    description: siteConfig.description,
+    url: "/",
+    siteName: siteConfig.name,
+    locale: siteConfig.locale,
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: siteConfig.title,
+    description: siteConfig.description,
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/portfolio.256x256.png", sizes: "256x256", type: "image/png" },
+    ],
+    apple: [{ url: "/portfolio.256x256.png" }],
+  },
 };
 
 export const viewport: Viewport = {

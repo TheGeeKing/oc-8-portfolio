@@ -132,7 +132,7 @@ const Stack = ({
             className="flex flex-col items-center justify-center gap-2"
           >
             {interactive ? (
-              <Link href={href} target="_blank">
+              <Link href={href} rel="noopener" target="_blank">
                 <Icon className="h-6 w-6" title={name} />
               </Link>
             ) : (

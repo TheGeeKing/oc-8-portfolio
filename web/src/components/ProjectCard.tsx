@@ -91,7 +91,7 @@ const Stack = ({
         ([key, { icon: Icon, name, href }]) => {
           if (props[key as keyof TechStack]) {
             if (canBeLink) {
-              <Link href={href} key={name} target="_blank">
+              <Link href={href} key={name} rel="noopener" target="_blank">
                 <Icon key={key} className="h-6 w-6" title={name} />
               </Link>;
             }
@@ -147,6 +147,7 @@ export const ProjectCard = ({
       <Link
         className="project-card flex h-full w-full scroll-mt-8 flex-col justify-between gap-4 rounded-xl border border-transparent bg-white/10 p-4 text-white transition-transform hover:scale-105 hover:bg-white/20"
         href={link}
+        rel="noopener"
         id={id}
         target="_blank"
         data-umami-event="link-click"

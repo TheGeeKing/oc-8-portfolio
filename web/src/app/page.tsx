@@ -6,10 +6,119 @@ import { ProjectCardTargetSync } from "@/components/ProjectCardTargetSync";
 import { Section } from "@/components/Section";
 import { SkillCard } from "@/components/SkillCard";
 import Link from "next/link";
+import { siteConfig } from "./seo";
+
+const profileUrl = siteConfig.url.toString();
+
+const projectJsonLdItems = [
+  {
+    name: "Projet L2",
+    description:
+      "Site avec 3 jeux de cartes en ligne, réalisé en plusieurs phases de rush de 4 jours.",
+    url: "https://projet-l2.home.mma.dev",
+  },
+  {
+    name: "New York City Bikes",
+    description:
+      "Projet d'optimisation de performance avec une base de données de plus de 25 millions de lignes.",
+    url: "https://nyc-bike-stats.mma.dev",
+  },
+  {
+    name: "TinyCRUD",
+    description:
+      "Alternative à crudcrud.com pour disposer rapidement d'une API REST de prototypage.",
+    url: "https://tinycrud.mma.dev",
+  },
+  {
+    name: "Bun Chat",
+    description: "Chat en temps réel avec Bun et Socket.IO.",
+    url: "https://chat.mma.dev",
+  },
+  {
+    name: "Shell",
+    description:
+      "Environnement containerisé pour exécuter des commandes shell en ligne.",
+    url: "https://shell.mma.dev",
+  },
+  {
+    name: "Manhunt Plus",
+    description: "Fork d'un plugin Minecraft amélioré.",
+    url: "https://github.com/TheGeeKing/manhunt-plus",
+  },
+] as const;
+
+const profileJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": `${profileUrl}#profile`,
+  url: profileUrl,
+  name: siteConfig.title,
+  description: siteConfig.description,
+  inLanguage: "fr-FR",
+  mainEntity: {
+    "@type": "Person",
+    "@id": `${profileUrl}#person`,
+    name: siteConfig.name,
+    url: profileUrl,
+    jobTitle: "Développeur Full-Stack & DevOps",
+    knowsAbout: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Python",
+      "Bun",
+      "Tailwind CSS",
+      "SCSS",
+      "CSS",
+      "HTML",
+      "JavaScript",
+      "Docker",
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "SQLite",
+      "Redis",
+      "Valkey",
+      "DevOps",
+      "Développement web",
+      "Développement Full-Stack",
+      "Développement DevOps",
+    ],
+    sameAs: [siteConfig.links.github, siteConfig.links.linkedin],
+  },
+};
+
+const projectsJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": `${profileUrl}#projects`,
+  name: "Projets de Marc-Antoine Mouttet",
+  itemListElement: projectJsonLdItems.map((project, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@type": "CreativeWork",
+      name: project.name,
+      description: project.description,
+      url: project.url,
+      creator: {
+        "@id": `${profileUrl}#person`,
+      },
+    },
+  })),
+};
 
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(profileJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(projectsJsonLd) }}
+      />
       <ProjectCardTargetSync />
       <main id="top">
         <h1 className="mx-auto my-8 flex flex-col items-center justify-center gap-6 text-4xl font-extrabold tracking-wide text-white sm:flex-row sm:text-4xl md:text-5xl lg:m-12 lg:text-6xl">

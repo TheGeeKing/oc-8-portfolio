@@ -59,7 +59,7 @@ export const Tag = ({
       <Link
         className={tagClassName}
         href={href}
-        rel={target === "_blank" ? "noreferrer" : undefined}
+        rel={target === "_blank" ? "noopener" : undefined}
         target={target}
         transitionTypes={transitionTypes}
       >

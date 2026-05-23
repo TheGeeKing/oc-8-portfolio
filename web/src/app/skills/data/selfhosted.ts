@@ -59,7 +59,7 @@ export const selfHostedServices: SelfHostedService[] = [
   },
   {
     name: "Portfolio",
-    url: "https://portfolio.mma.dev",
+    url: "https://mma.dev",
   },
   {
     name: "+ pleins d'autres",

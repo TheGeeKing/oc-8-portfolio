@@ -265,7 +265,7 @@ export default function HomePage() {
               id="help-meeee"
               title="Help meeee"
               description="Améliorer la qualité d'enseignement des élèves."
-              link="https://mma.dev/help_me/"
+              link="https://old.mma.dev/help_me/"
               stack={{ css: true, html: true, javascript: true, php: true }}
             />
             <ProjectCard

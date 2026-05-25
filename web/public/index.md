@@ -26,7 +26,7 @@ Voir le detail des competences: [/skills](/skills)
 - Tam mais en mieux: application mobile pour voir les horaires des transports en commun de Montpellier.
 - [New York City Bikes](https://nyc-bike-stats.mma.dev): optimisation de performance avec une base de donnees de plus de 25 millions de lignes.
 - Control My Spotify: site pour que n'importe qui puisse ajouter des morceaux a ma queue Spotify.
-- [TinyCRUD](https://tinycrud.mma.dev): alternative a crudcrud.com pour disposer rapidement d'une API REST de prototypage.
+- [TinyCRUD](https://tinycrud.dev): alternative a crudcrud.com pour disposer rapidement d'une API REST de prototypage.
 - No Thank You: retro-ingenierie sur une application mobile trop lente au demarrage afin de developper mon propre frontend.
 - [Manhunt Plus](https://github.com/TheGeeKing/manhunt-plus): fork d'un plugin Minecraft ameliore.
 - [Bun Chat](https://chat.mma.dev): chat en temps reel avec Bun et Socket.IO.

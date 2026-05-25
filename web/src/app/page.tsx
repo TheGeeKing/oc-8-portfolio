@@ -27,7 +27,7 @@ const projectJsonLdItems = [
     name: "TinyCRUD",
     description:
       "Alternative à crudcrud.com pour disposer rapidement d'une API REST de prototypage.",
-    url: "https://tinycrud.mma.dev",
+    url: "https://tinycrud.dev",
   },
   {
     name: "Bun Chat",
@@ -205,7 +205,7 @@ export default function HomePage() {
               id="tinycrud"
               title="TinyCRUD"
               description="Une alternative avec BEAUCOUP moins de limites que crudcrud.com permettant d'avoir rapidement une API REST pour faire des POCs."
-              link="https://tinycrud.mma.dev"
+              link="https://tinycrud.dev"
               stack={{
                 bun: true,
                 react: true,

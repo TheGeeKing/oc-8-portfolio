@@ -186,7 +186,7 @@ export default function HomePage() {
             <ProjectCard
               id="new-york-city-bikes"
               title="New York City Bikes"
-              description="Un projet ayant pour but de me challenger sur l'optimisation de performance avec une base de données ayant +25M de lignes."
+              description="Un projet ayant pour but de me challenger sur l'optimisation de performance avec une base de données ayant +300M de lignes."
               link="https://nyc-bike-stats.mma.dev"
               stack={{
                 react: true,

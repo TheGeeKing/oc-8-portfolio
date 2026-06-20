@@ -147,6 +147,8 @@ export default function HomePage() {
               className="rounded-lg border border-white/15 px-5 py-3 font-semibold text-white/80 transition hover:border-white/30 hover:bg-white/[0.06] active:translate-y-px"
               download
               href="/CV_MOUTTET_Marc-Antoine.pdf"
+              data-umami-event="file-download"
+              data-umami-event-file="CV_MOUTTET_Marc-Antoine.pdf"
             >
               Télécharger mon CV
             </Link>
@@ -154,6 +156,8 @@ export default function HomePage() {
               className="px-3 py-3 font-semibold text-white/70 transition hover:text-white"
               href="https://www.linkedin.com/in/mma--/"
               target="_blank"
+              data-umami-event="link-click"
+              data-umami-event-link="LinkedIn"
             >
               LinkedIn ↗
             </Link>
@@ -197,11 +201,10 @@ export default function HomePage() {
               </Card>
             </div>
           </div>
-          <Section title="Projets personnels" />
-          <div
-            className="grid scroll-mt-8 grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3 xl:[&>#new-york-city-bikes]:col-span-2 xl:[&>#tinycrud]:col-span-2 [&>*]:min-h-64"
-            id="projets"
-          >
+          <div id="projets">
+            <Section title="Projets personnels" />
+          </div>
+          <div className="grid scroll-mt-8 grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3 xl:[&>#new-york-city-bikes]:col-span-2 xl:[&>#tinycrud]:col-span-2 [&>*]:min-h-64">
             <ProjectCard
               id="project-l2"
               title="Projet L2"
@@ -384,6 +387,7 @@ export default function HomePage() {
           href="https://www.linkedin.com/in/mma--/"
           data-umami-event="link-click"
           data-umami-event-link="LinkedIn"
+          target="_blank"
         >
           LinkedIn
         </Link>
@@ -393,6 +397,7 @@ export default function HomePage() {
           href="https://github.com/TheGeeKing"
           data-umami-event="link-click"
           data-umami-event-link="GitHub"
+          target="_blank"
         >
           GitHub
         </Link>

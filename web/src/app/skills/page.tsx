@@ -85,22 +85,26 @@ export default function SkillsPage() {
         enter={{ "nav-forward": "overlay-in", default: "none" }}
         exit={{ "nav-back": "overlay-out", default: "none" }}
       >
-        <main className="min-h-dvh bg-black/20 px-3 py-4 text-white sm:px-6 lg:px-8">
+        <main className="min-h-dvh bg-[#101116] px-5 py-8 text-[#f4f1ea] sm:px-8 lg:px-10">
           <SkillCardHintStorage markSeen />
-          <section className="mx-auto grid h-[calc(100dvh-2rem)] w-full max-w-7xl grid-rows-[auto_1fr] overflow-hidden rounded-xl border border-white/10 bg-[#16172c] shadow-2xl shadow-black/40">
-            <header className="flex flex-row items-center justify-between gap-4 border-b border-white/10 bg-white/[0.04] p-4 sm:p-5">
+          <section className="mx-auto w-full max-w-7xl">
+            <header className="flex flex-row items-start justify-between gap-6 border-b border-white/10 pb-8 pt-4">
               <div>
-                {/* <p className="text-xs font-semibold uppercase tracking-wide text-white/45">
-                Notes techniques
-              </p> */}
-                <h1 className="mt-1 text-2xl font-bold sm:text-3xl">
-                  Compétences
+                <p className="mb-3 text-sm font-medium text-[#b9a2d8]">
+                  Marc-Antoine Mouttet
+                </p>
+                <h1 className="text-3xl font-semibold tracking-[-0.035em] sm:text-5xl">
+                  Compétences techniques
                 </h1>
+                <p className="mt-4 max-w-2xl leading-7 text-white/60">
+                  Les technologies que j&apos;ai utilisées en entreprise, en
+                  formation et pour construire mes propres projets.
+                </p>
               </div>
 
               <Link
                 aria-label="Retour"
-                className="inline-flex w-fit items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-3 py-2 text-sm font-semibold text-white transition hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[hsl(280,100%,70%)]"
+                className="inline-flex w-fit shrink-0 items-center gap-2 rounded-lg border border-white/15 px-3 py-2 text-sm font-semibold text-white/80 transition hover:border-white/30 hover:bg-white/[0.06] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#b995e5]"
                 href="/"
                 transitionTypes={["nav-back"]}
               >
@@ -109,10 +113,10 @@ export default function SkillsPage() {
               </Link>
             </header>
 
-            <div className="grid gap-4 overflow-y-auto p-4 lg:grid-cols-[1fr_21rem] lg:p-5">
+            <div className="grid gap-12 py-10 lg:grid-cols-[1fr_20rem]">
               <SkillInventory categories={skillCategories} />
 
-              <aside className="grid h-fit gap-4 lg:sticky lg:top-5">
+              <aside className="order-first grid h-fit gap-8 [&>section:first-child]:border-t-0 [&>section:first-child]:pt-0 lg:order-none lg:sticky lg:top-8">
                 <SidebarCard title="Utilisé en entreprise">
                   <div className="mt-4 grid gap-4">
                     {companyStacks.map((company) => (
@@ -138,7 +142,7 @@ export default function SkillsPage() {
                   </div>
                 </SidebarCard>
 
-                <SidebarCard title="En cours / Prochainement">
+                <SidebarCard title="Ce que j'approfondis">
                   <ol className="mt-4 grid gap-3">
                     {nextSteps.map((step, index) => (
                       <li
@@ -158,6 +162,11 @@ export default function SkillsPage() {
                     {selfHostedServices.map((service) => (
                       <li key={service.name}>
                         <Tag
+                          className={
+                            service.url
+                              ? "border-[#b995e5]/35 bg-[#b995e5]/10 text-[#d8c5ef] underline decoration-[#b995e5]/40 underline-offset-4 hover:border-[#b995e5]/60 hover:bg-[#b995e5]/20"
+                              : undefined
+                          }
                           href={service.url}
                           target={service.url ? "_blank" : undefined}
                           variant="project"

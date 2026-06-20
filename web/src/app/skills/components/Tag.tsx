@@ -11,21 +11,21 @@ const tagStyles = cva("border", {
     },
     variant: {
       company:
-        "rounded-full border-violet-300/30 bg-violet-300/10 px-2.5 py-1 text-xs font-medium text-violet-100",
+        "rounded-md border-[#b995e5]/25 bg-[#b995e5]/10 px-2.5 py-1 text-xs font-medium text-[#d8c5ef]",
       detail:
         "rounded-md border-white/10 bg-white/[0.07] px-2.5 py-1.5 text-sm text-white/80",
       formation:
-        "rounded-full border-sky-300/30 bg-sky-300/10 px-2.5 py-1 text-xs font-medium text-sky-100",
+        "rounded-md border-sky-300/20 bg-sky-300/[0.08] px-2.5 py-1 text-xs font-medium text-sky-100/80",
       "level-application":
-        "rounded-full border-cyan-300/30 bg-cyan-300/10 px-2.5 py-1 text-xs font-semibold text-cyan-100",
+        "rounded-md border-white/10 bg-white/[0.05] px-2.5 py-1 text-xs font-medium text-white/65",
       "level-en-cours":
-        "rounded-full border-emerald-300/30 bg-emerald-300/10 px-2.5 py-1 text-xs font-semibold text-emerald-100",
+        "rounded-md border-white/10 bg-white/[0.05] px-2.5 py-1 text-xs font-medium text-white/65",
       "level-maitrise":
-        "rounded-full border-[hsl(280,100%,70%)]/50 bg-[hsl(280,100%,70%)]/15 px-2.5 py-1 text-xs font-semibold text-[hsl(280,100%,86%)]",
+        "rounded-md border-[#b995e5]/25 bg-[#b995e5]/10 px-2.5 py-1 text-xs font-medium text-[#d8c5ef]",
       "level-notions":
-        "rounded-full border-white/15 bg-white/10 px-2.5 py-1 text-xs font-semibold text-white/70",
+        "rounded-md border-white/10 px-2.5 py-1 text-xs font-medium text-white/45",
       project:
-        "rounded-full border-white/15 bg-white/10 px-2.5 py-1 text-xs font-medium text-white/75",
+        "rounded-md border-white/10 bg-white/[0.05] px-2.5 py-1 text-xs font-medium text-white/65",
     },
   },
   compoundVariants: [

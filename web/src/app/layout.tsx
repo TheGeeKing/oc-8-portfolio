@@ -70,7 +70,7 @@ export default function RootLayout({
           />
         </>
       )}
-      <body className="flex min-h-screen flex-col bg-gradient-to-b from-[#1f153d] to-[#15162c] text-white">
+      <body className="flex min-h-screen flex-col bg-[#101116] text-[#f4f1ea]">
         <SkillCardHintStorage />
         {children}
       </body>

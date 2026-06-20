@@ -15,7 +15,7 @@ export const companyStacks: CompanyStack[] = [
       "PostgreSQL",
       "Coolify",
       "Python",
-      "IA",
+      "IA (RAG)",
     ],
   },
   {

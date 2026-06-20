@@ -118,13 +118,17 @@ const ProjectCardContent = ({
   return (
     <>
       <div className="flex flex-col gap-4">
-        <h3 className="text-2xl font-bold">
+        <h3 className="text-2xl font-semibold tracking-[-0.025em]">
           {title}
-          {link ? " →" : null}
         </h3>
-        <div className="text-lg">{description}</div>
+        <div className="max-w-[65ch] leading-7 text-white/65">{description}</div>
       </div>
-      {stack ? <Stack {...stack} canBeLink={false} /> : null}
+      <div className="flex items-end justify-between gap-4">
+        {stack ? <Stack {...stack} canBeLink={false} /> : <span />}
+        {link ? (
+          <span className="text-sm font-semibold text-[#d7c3f2]">Voir ↗</span>
+        ) : null}
+      </div>
     </>
   );
 };
@@ -145,7 +149,7 @@ export const ProjectCard = ({
   if (link) {
     return (
       <Link
-        className="project-card flex h-full w-full scroll-mt-8 flex-col justify-between gap-4 rounded-xl border border-transparent bg-white/10 p-4 text-white transition-transform hover:scale-105 hover:bg-white/20"
+        className="project-card flex h-full w-full scroll-mt-8 flex-col justify-between gap-8 rounded-2xl border border-white/10 bg-white/[0.045] p-6 text-[#f4f1ea] transition duration-200 hover:-translate-y-1 hover:border-[#a783d4]/50 hover:bg-white/[0.075] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#b995e5] active:translate-y-0"
         href={link}
         rel="noopener"
         id={id}
@@ -165,7 +169,7 @@ export const ProjectCard = ({
 
   return (
     <div
-      className="project-card flex h-full w-full scroll-mt-8 flex-col justify-between gap-4 rounded-xl border border-transparent bg-white/10 p-4 text-white"
+      className="project-card flex h-full w-full scroll-mt-8 flex-col justify-between gap-8 rounded-2xl border border-white/10 bg-white/[0.045] p-6 text-[#f4f1ea]"
       id={id}
     >
       <ProjectCardContent

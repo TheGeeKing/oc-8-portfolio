@@ -43,11 +43,11 @@ const SkillRow = ({ skill }: { skill: Skill }) => {
   };
 
   return (
-    <article className="rounded-lg border border-white/10 bg-[#15162c]/80">
+    <article className="border-t border-white/10 px-4 sm:px-5">
       <button
         aria-expanded={isOpen}
         className={cn(
-          "flex w-full flex-col gap-3 p-4 text-left sm:p-5",
+          "flex w-full flex-col gap-3 py-5 text-left",
           !hasDetails && "cursor-default",
         )}
         onClick={toggle}
@@ -55,7 +55,7 @@ const SkillRow = ({ skill }: { skill: Skill }) => {
       >
         <div className="flex items-start justify-between gap-4">
           <div className="min-w-0">
-            <h3 className="text-xl font-bold">{skill.name}</h3>
+            <h3 className="text-xl font-semibold text-white">{skill.name}</h3>
           </div>
 
           <div className="flex shrink-0 items-center gap-3">
@@ -72,7 +72,7 @@ const SkillRow = ({ skill }: { skill: Skill }) => {
         </div>
       </button>
 
-      <div className="flex flex-wrap gap-2 px-4 pb-4 sm:px-5 sm:pb-5">
+      <div className="flex flex-wrap gap-2 pb-5">
         {skill.usages.map((usage) => (
           <UsageTag key={`${usage.type}-${usage.label}`} usage={usage} />
         ))}
@@ -82,14 +82,14 @@ const SkillRow = ({ skill }: { skill: Skill }) => {
         <div
           aria-hidden={!isOpen}
           className={cn(
-            "grid overflow-hidden border-t transition-[border-color,grid-template-rows,opacity] duration-[var(--duration-move)] ease-out motion-reduce:transition-none",
+            "grid overflow-hidden transition-[grid-template-rows,opacity] duration-[var(--duration-move)] ease-out motion-reduce:transition-none",
             isOpen
-              ? "grid-rows-[1fr] border-white/10 opacity-100"
-              : "grid-rows-[0fr] border-white/0 opacity-0",
+              ? "grid-rows-[1fr] opacity-100"
+              : "grid-rows-[0fr] opacity-0",
           )}
         >
-          <div className="min-h-0 overflow-hidden px-4 pb-4 pt-3 sm:px-5 sm:pb-5">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-white/45">
+          <div className="min-h-0 overflow-hidden pb-5">
+            <p className="mb-3 text-sm text-white/45">
               Ce que je connais
             </p>
             <div className="flex flex-wrap gap-2">
@@ -108,13 +108,16 @@ const SkillRow = ({ skill }: { skill: Skill }) => {
 
 export const SkillInventory = ({ categories }: SkillInventoryProps) => {
   return (
-    <div className="grid gap-4">
+    <div className="grid gap-8">
       {categories.map((category) => (
-        <section className="grid gap-3" key={category.title}>
-          <h2 className="text-sm font-semibold uppercase tracking-wide text-white/45">
+        <section
+          className="overflow-hidden rounded-xl border border-white/10 bg-white/[0.025]"
+          key={category.title}
+        >
+          <h2 className="px-4 py-5 text-2xl font-semibold tracking-[-0.025em] sm:px-5">
             {category.title}
           </h2>
-          <div className="grid gap-3">
+          <div>
             {category.skills.map((skill) => (
               <SkillRow key={skill.name} skill={skill} />
             ))}

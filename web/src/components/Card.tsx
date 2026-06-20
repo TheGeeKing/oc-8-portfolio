@@ -9,7 +9,7 @@ export const Card = ({
 }) => {
   return (
     <div
-      className={`flex h-full w-full flex-col gap-4 rounded-xl bg-white/10 p-4 text-white ${className}`}
+      className={`flex h-full w-full flex-col gap-4 rounded-2xl border border-white/10 bg-white/[0.045] p-5 text-[#f4f1ea] ${className}`}
     >
       {children}
     </div>

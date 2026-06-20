@@ -3,9 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --duration-exit: 150ms;
+  --duration-exit: 220ms;
   --duration-enter: 250ms;
   --duration-move: 240ms;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @keyframes overlay-in {
@@ -26,7 +30,7 @@
   }
   to {
     opacity: 0;
-    transform: scale(0.985) translateY(8px);
+    transform: scale(0.995) translateY(6px);
   }
 }
 
@@ -92,7 +96,7 @@
 }
 
 ::view-transition-old(.overlay-out) {
-  animation: var(--duration-exit) ease-in both overlay-out;
+  animation: var(--duration-exit) ease-in-out both overlay-out;
 }
 
 @media (prefers-reduced-motion: reduce) {

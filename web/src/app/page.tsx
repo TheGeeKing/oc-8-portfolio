@@ -121,11 +121,46 @@ export default function HomePage() {
       />
       <ProjectCardTargetSync />
       <main id="top">
-        <h1 className="mx-auto my-8 flex flex-col items-center justify-center gap-6 text-4xl font-extrabold tracking-wide text-white sm:flex-row sm:text-4xl md:text-5xl lg:m-12 lg:text-6xl">
-          Marc-Antoine<span className="text-[hsl(280,100%,70%)]">Mouttet</span>
-        </h1>
+        <header className="mx-auto w-full max-w-7xl px-5 pb-20 pt-12 sm:px-8 sm:pb-28 sm:pt-16 lg:px-10">
+          <div className="max-w-4xl">
+            <p className="mb-4 text-lg font-medium text-[#b9a2d8]">
+              Marc-Antoine Mouttet
+            </p>
+            <h1 className="text-4xl font-semibold leading-[1.05] tracking-[-0.045em] text-[#f4f1ea] sm:text-6xl lg:text-7xl">
+              Développeur full-stack, à la recherche d'une nouvelle opportunité.
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/65">
+              Actuellement chez Design Therapy à Montpellier, je développe des
+              applications web de bout en bout avec React, TypeScript, Node.js
+              et Docker. Je souhaite rejoindre une nouvelle équipe afin de
+              continuer à progresser sur des projets concrets.
+            </p>
+          </div>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link
+              className="rounded-lg bg-[#d7c3f2] px-5 py-3 font-semibold text-[#17131c] transition hover:bg-[#eadffd] active:translate-y-px"
+              href="#projets"
+            >
+              Découvrir mes projets
+            </Link>
+            <Link
+              className="rounded-lg border border-white/15 px-5 py-3 font-semibold text-white/80 transition hover:border-white/30 hover:bg-white/[0.06] active:translate-y-px"
+              download
+              href="/CV_MOUTTET_Marc-Antoine.pdf"
+            >
+              Télécharger mon CV
+            </Link>
+            <Link
+              className="px-3 py-3 font-semibold text-white/70 transition hover:text-white"
+              href="https://www.linkedin.com/in/mma--/"
+              target="_blank"
+            >
+              LinkedIn ↗
+            </Link>
+          </div>
+        </header>
 
-        <div className="mb-12 flex flex-col gap-4 px-4 sm:px-12 md:px-20 lg:px-28">
+        <div className="mx-auto mb-20 flex w-full max-w-7xl flex-col gap-4 px-5 sm:px-8 lg:px-10">
           <div className="flex flex-col gap-4 sm:grid sm:grid-cols-3">
             <div className="col-span-1">
               <SkillCard
@@ -148,26 +183,23 @@ export default function HomePage() {
             </div>
             <div className="col-span-2">
               <Card>
-                <p className="text-xl">
-                  Développeur full-stack en alternance chez Design Therapy 🖌️,
-                  je conçois et développe des applications web avec une
+                <p className="max-w-[65ch] text-lg leading-8 text-white/70">
+                  Je conçois et développe des applications web avec une
                   attention particulière portée à la maintenabilité, à
                   l'expérience utilisateur et à l'infrastructure. Je travaille
-                  principalement avec React, Next.js, TypeScript et Node.js, du
-                  frontend au backend, en passant par le déploiement et
-                  l'administration de services. En parallèle de mes études, je
+                  du frontend au backend, jusqu'au déploiement et à
+                  l'administration des services. En parallèle de mes études, je
                   développe et héberge mes propres projets autour du
                   self-hosting, du DevOps et des architectures web modernes.
-                  J'aime construire des solutions concrètes, comprendre le
-                  fonctionnement des outils que j'utilise et expérimenter de
-                  nouvelles technologies.
+                  J'aime construire des solutions concrètes et comprendre les
+                  outils que j'utilise.
                 </p>
               </Card>
             </div>
           </div>
-          <Section title="Projets Personnels" />
+          <Section title="Projets personnels" />
           <div
-            className="grid scroll-mt-8 grid-cols-1 place-items-center gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 [&>*]:min-h-52"
+            className="grid scroll-mt-8 grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3 xl:[&>#new-york-city-bikes]:col-span-2 xl:[&>#tinycrud]:col-span-2 [&>*]:min-h-64"
             id="projets"
           >
             <ProjectCard
@@ -307,7 +339,7 @@ export default function HomePage() {
           <Section title="Projets OpenClassrooms" />
 
           {/* Projets OC */}
-          <div className="grid grid-cols-1 place-items-center gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 [&>*]:min-h-52">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 [&>*]:min-h-52">
             <ProjectCard
               id="bookie"
               title="Bookie"
@@ -346,9 +378,9 @@ export default function HomePage() {
           </div>
         </div>
       </main>
-      <footer className="flex items-center justify-center gap-4 bg-white/10 p-4 text-white">
+      <footer className="mx-auto flex w-full max-w-7xl items-center justify-center gap-4 border-t border-white/10 p-8 text-white/70">
         <Link
-          className="text-[hsl(280,100%,70%)]"
+          className="text-[#cbb2ea] hover:text-[#eadffd]"
           href="https://www.linkedin.com/in/mma--/"
           data-umami-event="link-click"
           data-umami-event-link="LinkedIn"
@@ -357,7 +389,7 @@ export default function HomePage() {
         </Link>
         <Dot />
         <Link
-          className="text-[hsl(280,100%,70%)]"
+          className="text-[#cbb2ea] hover:text-[#eadffd]"
           href="https://github.com/TheGeeKing"
           data-umami-event="link-click"
           data-umami-event-link="GitHub"
@@ -366,7 +398,7 @@ export default function HomePage() {
         </Link>
         <Dot />
         <Link
-          className="text-[hsl(280,100%,70%)]"
+          className="text-[#cbb2ea] hover:text-[#eadffd]"
           download
           href="/CV_MOUTTET_Marc-Antoine.pdf"
           data-umami-event="file-download"

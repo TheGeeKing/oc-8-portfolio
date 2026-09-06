@@ -130,12 +130,12 @@ export default function HomePage() {
               Marc-Antoine Mouttet
             </p>
             <h1 className="font-semibold text-4xl text-[#f4f1ea] leading-[1.05] tracking-[-0.045em] sm:text-6xl lg:text-7xl">
-              Développeur full-stack, à la recherche d'une nouvelle opportunité.
+              Développeur Full-Stack et DevOps.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-white/65 leading-8">
-              Actuellement chez Design Therapy à Montpellier, je développe des
+              Actuellement chez SNS Security à Montpellier, je développe des
               applications web de bout en bout avec React, TypeScript, Node.js
-              et Docker. Je souhaite rejoindre une nouvelle équipe afin de
+              et Docker. Je reste ouvert aux nouvelles opportunités afin de
               continuer à progresser sur des projets concrets.
             </p>
           </div>

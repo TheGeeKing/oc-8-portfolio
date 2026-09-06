@@ -9,9 +9,6 @@ const isDockerBuild = process.env.DOCKER_BUILD === "true";
 /** @type {import("next").NextConfig} */
 const config = {
   output: isDockerBuild ? "export" : undefined,
-  experimental: {
-    viewTransition: true,
-  },
 };
 
 export default config;

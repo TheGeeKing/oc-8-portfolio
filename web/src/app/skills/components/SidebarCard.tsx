@@ -8,8 +8,8 @@ export const SidebarCard = ({
   title: string;
 }) => {
   return (
-    <section className="border-t border-white/10 pt-5">
-      <h2 className="text-lg font-semibold tracking-[-0.02em]">{title}</h2>
+    <section className="border-white/10 border-t pt-5">
+      <h2 className="font-semibold text-lg tracking-[-0.02em]">{title}</h2>
       {children}
     </section>
   );

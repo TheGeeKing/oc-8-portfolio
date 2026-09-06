@@ -2,9 +2,14 @@
 
 import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa6";
-import { Tag } from "./Tag";
 import { cn } from "@/lib/utils";
-import type { Skill, SkillCategory, SkillLevel, Usage } from "../data/skills";
+import {
+  type Skill,
+  type SkillCategory,
+  type SkillLevel,
+  type Usage,
+} from "../data/skills";
+import { Tag } from "./Tag";
 
 type SkillInventoryProps = {
   categories: SkillCategory[];
@@ -43,7 +48,7 @@ const SkillRow = ({ skill }: { skill: Skill }) => {
   };
 
   return (
-    <article className="border-t border-white/10 px-4 sm:px-5">
+    <article className="border-white/10 border-t px-4 sm:px-5">
       <button
         aria-expanded={isOpen}
         className={cn(
@@ -55,7 +60,7 @@ const SkillRow = ({ skill }: { skill: Skill }) => {
       >
         <div className="flex items-start justify-between gap-4">
           <div className="min-w-0">
-            <h3 className="text-xl font-semibold text-white">{skill.name}</h3>
+            <h3 className="font-semibold text-white text-xl">{skill.name}</h3>
           </div>
 
           <div className="flex shrink-0 items-center gap-3">
@@ -89,9 +94,7 @@ const SkillRow = ({ skill }: { skill: Skill }) => {
           )}
         >
           <div className="min-h-0 overflow-hidden pb-5">
-            <p className="mb-3 text-sm text-white/45">
-              Ce que je connais
-            </p>
+            <p className="mb-3 text-sm text-white/45">Ce que je connais</p>
             <div className="flex flex-wrap gap-2">
               {skill.details!.map((detail) => (
                 <Tag key={detail} variant="detail">
@@ -114,7 +117,7 @@ export const SkillInventory = ({ categories }: SkillInventoryProps) => {
           className="overflow-hidden rounded-xl border border-white/10 bg-white/[0.025]"
           key={category.title}
         >
-          <h2 className="px-4 py-5 text-2xl font-semibold tracking-[-0.025em] sm:px-5">
+          <h2 className="px-4 py-5 font-semibold text-2xl tracking-[-0.025em] sm:px-5">
             {category.title}
           </h2>
           <div>

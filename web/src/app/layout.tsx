@@ -1,9 +1,9 @@
 import "@/styles/globals.css";
 
-import { SkillCardHintStorage } from "@/components/SkillCardHintStorage";
 import { GeistSans } from "geist/font/sans";
-import { type Viewport, type Metadata } from "next";
+import { type Metadata, type Viewport } from "next";
 import Script from "next/script";
+import { SkillCardHintStorage } from "@/components/SkillCardHintStorage";
 import { siteConfig } from "./seo";
 
 export const metadata: Metadata = {

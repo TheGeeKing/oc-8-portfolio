@@ -19,7 +19,9 @@ const getHashTargetId = () => {
 const updateHighlightedProject = () => {
   document
     .querySelectorAll<HTMLElement>(`.project-card[${ACTIVE_ATTRIBUTE}]`)
-    .forEach((card) => card.removeAttribute(ACTIVE_ATTRIBUTE));
+    .forEach((card) => {
+      card.removeAttribute(ACTIVE_ATTRIBUTE);
+    });
 
   const targetId = getHashTargetId();
   if (!targetId) return;
@@ -33,6 +35,7 @@ const updateHighlightedProject = () => {
 export const ProjectCardTargetSync = () => {
   const pathname = usePathname();
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: re-run after client navigations
   useEffect(() => {
     updateHighlightedProject();
 

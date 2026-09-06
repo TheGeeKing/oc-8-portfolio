@@ -1,22 +1,22 @@
 import Link from "next/link";
 import { type IconType } from "react-icons";
+import { BsFiletypeScss } from "react-icons/bs";
 import { FaRegHandPointer } from "react-icons/fa6";
 import {
-  SiTailwindcss,
-  SiReact,
-  SiTypescript,
-  SiNextdotjs,
-  SiJavascript,
-  SiHtml5,
   SiCss3,
-  SiPython,
-  SiPhp,
-  SiNodedotjs,
   SiDocker,
+  SiHtml5,
+  SiJavascript,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiPhp,
+  SiPython,
+  SiReact,
+  SiTailwindcss,
+  SiTypescript,
 } from "react-icons/si";
-import { BsFiletypeScss } from "react-icons/bs";
-import { Card } from "./Card";
 import { cn } from "@/lib/utils";
+import { Card } from "./Card";
 
 type Mastering = "notions" | "application" | "maîtrise" | "expertise";
 
@@ -119,7 +119,7 @@ const Stack = ({
   const sortedKeys = sortTechStack(props);
 
   return (
-    <div className="grid grid-cols-2 gap-4 min-[450px]:grid-cols-3 min-[550px]:grid-cols-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    <div className="grid grid-cols-2 gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 min-[450px]:grid-cols-3 min-[550px]:grid-cols-4">
       {sortedKeys.map((key) => {
         const {
           icon: Icon,
@@ -168,11 +168,11 @@ export const SkillCard = ({
       )}
     >
       <div className="flex items-center justify-between gap-3">
-        <h3 className="text-2xl font-bold">{title}</h3>
+        <h3 className="font-bold text-2xl">{title}</h3>
         {href && (
           <span
             aria-hidden="true"
-            className="skill-tap-hint pointer-events-none relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[hsl(280,100%,70%)]/40 bg-black/25 text-[hsl(280,100%,70%)] shadow-lg shadow-black/20"
+            className="skill-tap-hint pointer-events-none relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[hsl(280,100%,70%)]/40 bg-black/25 text-[hsl(280,100%,70%)] shadow-black/20 shadow-lg"
           >
             <span className="skill-tap-ring absolute inset-0 rounded-full border border-[hsl(280,100%,70%)]/45" />
             <FaRegHandPointer className="skill-tap-icon relative h-5 w-5" />

@@ -327,11 +327,13 @@ export const skillCategories: SkillCategory[] = [
         name: "DuckDB",
         level: "application",
         details: ["Parquet files", "compression ZSTD", "columnar storage"],
-        usages: [{
-          type: "project",
-          label: "New York City Bikes",
-          projectSlug: "new-york-city-bikes",
-        },],
+        usages: [
+          {
+            type: "project",
+            label: "New York City Bikes",
+            projectSlug: "new-york-city-bikes",
+          },
+        ],
       },
       {
         name: "Object Storage",
@@ -564,7 +566,12 @@ export const skillCategories: SkillCategory[] = [
           "Design Tokens",
           "Design Systems",
         ],
-        usages: [{ type: "company", label: "Design Therapy" }, { type: "company", label: "Morfo" }, { type: "formation", label: "OpenClassrooms" }, { type: "formation", label: "My Digital School" }],
+        usages: [
+          { type: "company", label: "Design Therapy" },
+          { type: "company", label: "Morfo" },
+          { type: "formation", label: "OpenClassrooms" },
+          { type: "formation", label: "My Digital School" },
+        ],
       },
     ],
   },

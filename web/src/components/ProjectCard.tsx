@@ -1,21 +1,21 @@
 import Link from "next/link";
 import { type IconType } from "react-icons";
-import {
-  SiTailwindcss,
-  SiReact,
-  SiTypescript,
-  SiNextdotjs,
-  SiJavascript,
-  SiHtml5,
-  SiCss3,
-  SiPython,
-  SiPhp,
-  SiSocketdotio,
-  SiBun,
-} from "react-icons/si";
 import { BsFiletypeScss } from "react-icons/bs";
 import { FaNodeJs } from "react-icons/fa";
 import { FaJava } from "react-icons/fa6";
+import {
+  SiBun,
+  SiCss3,
+  SiHtml5,
+  SiJavascript,
+  SiNextdotjs,
+  SiPhp,
+  SiPython,
+  SiReact,
+  SiSocketdotio,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
 
 type TechStack = {
   nextjs?: boolean;
@@ -118,15 +118,15 @@ const ProjectCardContent = ({
   return (
     <>
       <div className="flex flex-col gap-4">
-        <h3 className="text-2xl font-semibold tracking-[-0.025em]">
-          {title}
-        </h3>
-        <div className="max-w-[65ch] leading-7 text-white/65">{description}</div>
+        <h3 className="font-semibold text-2xl tracking-[-0.025em]">{title}</h3>
+        <div className="max-w-[65ch] text-white/65 leading-7">
+          {description}
+        </div>
       </div>
       <div className="flex items-end justify-between gap-4">
         {stack ? <Stack {...stack} canBeLink={false} /> : <span />}
         {link ? (
-          <span className="text-sm font-semibold text-[#d7c3f2]">Voir ↗</span>
+          <span className="font-semibold text-[#d7c3f2] text-sm">Voir ↗</span>
         ) : null}
       </div>
     </>

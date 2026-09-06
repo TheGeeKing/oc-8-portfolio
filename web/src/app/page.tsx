@@ -1,11 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
+
+import Link from "next/link";
 import { Card } from "@/components/Card";
 import Dot from "@/components/Dot";
 import { ProjectCard } from "@/components/ProjectCard";
 import { ProjectCardTargetSync } from "@/components/ProjectCardTargetSync";
 import { Section } from "@/components/Section";
 import { SkillCard } from "@/components/SkillCard";
-import Link from "next/link";
 import { siteConfig } from "./seo";
 
 const profileUrl = siteConfig.url.toString();
@@ -113,23 +114,25 @@ export default function HomePage() {
     <>
       <script
         type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD from static site data
         dangerouslySetInnerHTML={{ __html: JSON.stringify(profileJsonLd) }}
       />
       <script
         type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD from static site data
         dangerouslySetInnerHTML={{ __html: JSON.stringify(projectsJsonLd) }}
       />
       <ProjectCardTargetSync />
       <main id="top">
-        <header className="mx-auto w-full max-w-7xl px-5 pb-20 pt-12 sm:px-8 sm:pb-28 sm:pt-16 lg:px-10">
+        <header className="mx-auto w-full max-w-7xl px-5 pt-12 pb-20 sm:px-8 sm:pt-16 sm:pb-28 lg:px-10">
           <div className="max-w-4xl">
-            <p className="mb-4 text-lg font-medium text-[#b9a2d8]">
+            <p className="mb-4 font-medium text-[#b9a2d8] text-lg">
               Marc-Antoine Mouttet
             </p>
-            <h1 className="text-4xl font-semibold leading-[1.05] tracking-[-0.045em] text-[#f4f1ea] sm:text-6xl lg:text-7xl">
+            <h1 className="font-semibold text-4xl text-[#f4f1ea] leading-[1.05] tracking-[-0.045em] sm:text-6xl lg:text-7xl">
               Développeur full-stack, à la recherche d'une nouvelle opportunité.
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/65">
+            <p className="mt-6 max-w-2xl text-lg text-white/65 leading-8">
               Actuellement chez Design Therapy à Montpellier, je développe des
               applications web de bout en bout avec React, TypeScript, Node.js
               et Docker. Je souhaite rejoindre une nouvelle équipe afin de
@@ -187,7 +190,7 @@ export default function HomePage() {
             </div>
             <div className="col-span-2">
               <Card>
-                <p className="max-w-[65ch] text-lg leading-8 text-white/70">
+                <p className="max-w-[65ch] text-lg text-white/70 leading-8">
                   Je conçois et développe des applications web avec une
                   attention particulière portée à la maintenabilité, à
                   l'expérience utilisateur et à l'infrastructure. Je travaille
@@ -381,7 +384,7 @@ export default function HomePage() {
           </div>
         </div>
       </main>
-      <footer className="mx-auto flex w-full max-w-7xl items-center justify-center gap-4 border-t border-white/10 p-8 text-white/70">
+      <footer className="mx-auto flex w-full max-w-7xl items-center justify-center gap-4 border-white/10 border-t p-8 text-white/70">
         <Link
           className="text-[#cbb2ea] hover:text-[#eadffd]"
           href="https://www.linkedin.com/in/mma--/"

@@ -1,15 +1,15 @@
+import { type Metadata } from "next";
 import Link from "next/link";
-import type { Metadata } from "next";
 import { ViewTransition } from "react";
-import { SkillCardHintStorage } from "@/components/SkillCardHintStorage";
 import { FaArrowLeft } from "react-icons/fa6";
+import { SkillCardHintStorage } from "@/components/SkillCardHintStorage";
+import { siteConfig } from "../seo";
 import { SidebarCard } from "./components/SidebarCard";
 import { SkillInventory } from "./components/SkillInventory";
 import { Tag } from "./components/Tag";
-import { skillCategories } from "./data/skills";
 import { companyStacks } from "./data/companies";
 import { selfHostedServices } from "./data/selfhosted";
-import { siteConfig } from "../seo";
+import { skillCategories } from "./data/skills";
 
 const skillsDescription =
   "Compétences techniques : React, Next.js, TypeScript, Python, Docker, DevOps, projets professionnels et services self-hostés.";
@@ -78,6 +78,7 @@ export default function SkillsPage() {
     <>
       <script
         type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD from static site data
         dangerouslySetInnerHTML={{ __html: JSON.stringify(skillsJsonLd) }}
       />
       <ViewTransition
@@ -88,15 +89,15 @@ export default function SkillsPage() {
         <main className="min-h-dvh bg-[#101116] px-5 py-8 text-[#f4f1ea] sm:px-8 lg:px-10">
           <SkillCardHintStorage markSeen />
           <section className="mx-auto w-full max-w-7xl">
-            <header className="flex flex-row items-start justify-between gap-6 border-b border-white/10 pb-8 pt-4">
+            <header className="flex flex-row items-start justify-between gap-6 border-white/10 border-b pt-4 pb-8">
               <div>
-                <p className="mb-3 text-sm font-medium text-[#b9a2d8]">
+                <p className="mb-3 font-medium text-[#b9a2d8] text-sm">
                   Marc-Antoine Mouttet
                 </p>
-                <h1 className="text-3xl font-semibold tracking-[-0.035em] sm:text-5xl">
+                <h1 className="font-semibold text-3xl tracking-[-0.035em] sm:text-5xl">
                   Compétences techniques
                 </h1>
-                <p className="mt-4 max-w-2xl leading-7 text-white/60">
+                <p className="mt-4 max-w-2xl text-white/60 leading-7">
                   Les technologies que j&apos;ai utilisées en entreprise, en
                   formation et pour construire mes propres projets.
                 </p>
@@ -104,7 +105,7 @@ export default function SkillsPage() {
 
               <Link
                 aria-label="Retour"
-                className="inline-flex w-fit shrink-0 items-center gap-2 rounded-lg border border-white/15 px-3 py-2 text-sm font-semibold text-white/80 transition hover:border-white/30 hover:bg-white/[0.06] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#b995e5]"
+                className="inline-flex w-fit shrink-0 items-center gap-2 rounded-lg border border-white/15 px-3 py-2 font-semibold text-sm text-white/80 transition hover:border-white/30 hover:bg-white/[0.06] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#b995e5]"
                 href="/"
                 transitionTypes={["nav-back"]}
               >
@@ -116,12 +117,12 @@ export default function SkillsPage() {
             <div className="grid gap-12 py-10 lg:grid-cols-[1fr_20rem]">
               <SkillInventory categories={skillCategories} />
 
-              <aside className="order-first grid h-fit gap-8 [&>section:first-child]:border-t-0 [&>section:first-child]:pt-0 lg:order-none lg:sticky lg:top-8">
+              <aside className="order-first grid h-fit gap-8 lg:sticky lg:top-8 lg:order-none [&>section:first-child]:border-t-0 [&>section:first-child]:pt-0">
                 <SidebarCard title="Utilisé en entreprise">
                   <div className="mt-4 grid gap-4">
                     {companyStacks.map((company) => (
                       <div key={company.name}>
-                        <h3 className="text-sm font-semibold text-white/80">
+                        <h3 className="font-semibold text-sm text-white/80">
                           <Link
                             href={company.url}
                             rel="noopener"
@@ -146,10 +147,10 @@ export default function SkillsPage() {
                   <ol className="mt-4 grid gap-3">
                     {nextSteps.map((step, index) => (
                       <li
-                        className="grid grid-cols-[1.75rem_1fr] gap-3 text-sm leading-6 text-white/75"
+                        className="grid grid-cols-[1.75rem_1fr] gap-3 text-sm text-white/75 leading-6"
                         key={step}
                       >
-                        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-xs font-bold text-white/70">
+                        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 font-bold text-white/70 text-xs">
                           {index + 1}
                         </span>
                         <span>{step}</span>

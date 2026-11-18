@@ -4,6 +4,8 @@ import { siteConfig } from "./seo";
 export const alt = `${siteConfig.name} : développeur full-stack et DevOps`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
+// Required for `output: "export"` (Docker build): render the image at build time.
+export const dynamic = "force-static";
 
 export default function OpenGraphImage() {
   return new ImageResponse(

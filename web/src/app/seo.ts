@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "Marc-Antoine Mouttet",
-  title: "Marc-Antoine Mouttet | Développeur Full-Stack & DevOps",
+  title: "Marc-Antoine Mouttet | Développeur full-stack et DevOps",
   description:
-    "Développeur full-stack à Montpellier, je recherche une nouvelle opportunité en DevOps. Découvrez mes projets React, TypeScript, Node.js et DevOps.",
+    "Développeur full-stack et DevOps à Montpellier, à la recherche d'une alternance. Découvrez mes projets React, TypeScript, Node.js et Docker.",
   url: new URL("https://mma.dev"),
   locale: "fr_FR",
   links: {
@@ -17,6 +17,8 @@ export const siteConfig = {
     "développeur full stack",
     "développeur full stack montpellier",
     "développeur DevOps",
+    "alternance développeur full-stack",
+    "alternance DevOps",
     "portfolio développeur",
     "React",
     "Next.js",

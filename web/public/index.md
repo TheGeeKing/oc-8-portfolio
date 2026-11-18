@@ -1,11 +1,11 @@
 ---
 title: Marc-Antoine Mouttet | Developpeur Full-Stack & DevOps
-description: Developpeur full-stack en alternance, je concois des applications web et partage mes projets autour de React, Next.js, TypeScript, Python, Docker et DevOps.
+description: Developpeur full-stack et DevOps a Montpellier, a la recherche d'une alternance. Je partage mes projets autour de React, Next.js, TypeScript, Python, Docker et DevOps.
 ---
 
 # Marc-Antoine Mouttet
 
-Developpeur full-stack en alternance chez Design Therapy, je concois et developpe des applications web avec une attention particuliere portee a la maintenabilite, a l'experience utilisateur et a l'infrastructure.
+Developpeur full-stack et DevOps, a la recherche d'une alternance. Je concois et developpe des applications web avec une attention particuliere portee a la maintenabilite, a l'experience utilisateur et a l'infrastructure.
 
 Je travaille principalement avec React, Next.js, TypeScript et Node.js, du frontend au backend, en passant par le deploiement et l'administration de services. En parallele de mes etudes, je developpe et heberge mes propres projets autour du self-hosting, du DevOps et des architectures web modernes.
 
@@ -61,7 +61,7 @@ Voir le detail des competences: [/skills](/skills)
   "@type": "ProfilePage",
   "url": "https://mma.dev",
   "name": "Marc-Antoine Mouttet | Developpeur Full-Stack & DevOps",
-  "description": "Developpeur full-stack en alternance, je concois des applications web et partage mes projets autour de React, Next.js, TypeScript, Python, Docker et DevOps.",
+  "description": "Developpeur full-stack et DevOps a Montpellier, a la recherche d'une alternance. Je partage mes projets autour de React, Next.js, TypeScript, Python, Docker et DevOps.",
   "inLanguage": "fr-FR",
   "mainEntity": {
     "@type": "Person",

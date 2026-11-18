@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     canonical: "/skills",
   },
   openGraph: {
-    title: `Compétences | ${siteConfig.name}`,
+    title: `Compétences techniques | ${siteConfig.name}`,
     description: skillsDescription,
     url: "/skills",
     siteName: siteConfig.name,
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: {
-    card: "summary",
-    title: `Compétences | ${siteConfig.name}`,
+    card: "summary_large_image",
+    title: `Compétences techniques | ${siteConfig.name}`,
     description: skillsDescription,
   },
 };
